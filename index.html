@@ -1,29 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en"> 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD App</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CRUD Application</title> <!-- Title of the web page -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Includes Bootstrap CSS for styling -->
+    <style>
+        body {
+            padding-top: 20px; /* Adds padding to the top of the body */
+        }
+        .container {
+            max-width: 600px; /* Limits the width of the container */
+        }
+        .item-list {
+            margin-top: 20px; /* Adds margin to the top of the item list */
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="my-4">CRUD Application</h1>
-    <!-- Your form and entity display elements go here -->
-    <script src="app.js"></script>
-  </div>
+    <div class="container"> <!-- Bootstrap container for central alignment -->
+        <h1>CRUD Application</h1> <!-- Main heading of the page -->
+        <form id="item-form"> <!-- Form for adding new items, identified by 'item-form' -->
+            <div class="form-group"> <!-- Bootstrap form group for styling -->
+                <label for="item-name">Item Name</label> <!-- Label for the input field -->
+                <input type="text" class="form-control" id="item-name" required> <!-- Input field for item name, styled with Bootstrap -->
+            </div>
+            <button type="submit" class="btn btn-primary">Add Item</button> <!-- Submit button, styled with Bootstrap -->
+        </form>
 
-  <form id="entity-form">
-    <div class="form-group">
-      <label for="entityName">Entity Name</label>
-      <input type="text" class="form-control" id="entityName" required>
+        <div class="item-list" id="item-list"> <!-- Container for the list of items, identified by 'item-list' -->
+            <h2>Items</h2> <!-- Subheading for the items list -->
+            <ul class="list-group" id="items"> <!-- Unordered list for displaying items, identified by 'items' -->
+                <!-- Items will be dynamically added here -->
+            </ul>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Add Entity</button>
-  </form>
-  
-  <ul id="entity-list" class="list-group mt-4"></ul>
-  
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
 </body>
 </html>
+
 
